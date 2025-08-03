@@ -75,6 +75,7 @@ const ProfilePage = () => {
               createdAt={blogs.createdAt}
               updatedAt={blogs.updatedAt}
               isOwnBlog={true}
+              username={blogs.username}
             />
           ))
         )}
