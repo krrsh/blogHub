@@ -12,6 +12,7 @@ import ProfilePage from "./pages/ProfilePage/ProfilePage";
 import { useAuthContext } from "./context/authContext";
 import HomePage from "./pages/HomePage/HomePage.jsx";
 
+
 function App() {
   const ProtectedRoute = ({ children }) => {
     const { user } = useAuthContext();
