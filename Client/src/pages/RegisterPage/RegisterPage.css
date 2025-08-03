@@ -1,0 +1,101 @@
+.signup_formContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    padding: 40px;
+    gap: 20px;
+    width: 50%;
+}
+.signup_formContainer h1{
+    text-align: center;
+    color: #166f7b;
+    font-family: 'Poppins';
+}
+.signup_formContainer .haveaccnt span{
+     font-family: 'Inter';
+    text-decoration: underline;
+    cursor: pointer;
+    color:#244779;
+    font-size: 12px;
+}
+.signup_formContainer div{
+    display: flex;
+    flex-direction: column;
+}
+.signup_formContainer div p{
+    color: #666666;
+    font-size: 10px;
+    font-family: 'Poppins';
+}
+.signup_formContainer div input{
+    height: 30px;
+    outline: none;
+    border: 1px solid rgba(102, 102, 102, 0.35);
+    color: black;
+    border-radius: 5px;
+    padding: 0px 6px;
+}
+.signup_formContainer .signinPageBtn{
+    font-family: 'Poppins';
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    background-color: #C3C3C3;
+    color: #FFFFFF;
+    font-weight: 500;
+    transition: 0.1s ease-in-out;
+}
+.signup_formContainer .signinPageBtn:hover{
+    background-color: #23B8CC;
+    transform: scale(1.01);
+    box-shadow: rgb(32, 121, 133) 0px 5px 5px;
+}
+.signup_formContainer .termsCheckBox{
+    flex-direction: row;
+    gap: 10px;
+    align-items: normal;
+}
+.signup_formContainer .termsCheckBox input{
+    cursor: pointer;
+}
+.signup_formContainer .termsCheckBox p{
+    font-size: 9px;
+}
+.signup_formContainer .termsCheckBox p span{
+    cursor: pointer;
+    text-decoration: underline;
+    font-family: 'Poppins';
+}
+.signup_formContainer .termsCheckBox p span:hover, .signup_formContainer .haveaccnt span:hover{
+    color:#23B8CC;;
+}
+ .terms, .haveaccnt{
+    color: #676B5F;
+    text-align: center;
+    font-size: 10px;
+    font-family: 'Inter';
+}
+ .terms span{
+    text-decoration: underline;
+    cursor: pointer;
+}
+ .terms span:hover{
+    color:#5786c6;
+}
+
+
+@media screen and (max-width:700px) {
+.signup_formContainer{
+    width: 70%;
+}
+}
+@media screen and (max-width:400px) {
+.signup_formContainer{
+    width: 100%;
+}
+}

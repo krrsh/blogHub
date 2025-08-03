@@ -1,0 +1,182 @@
+.blogCard {
+  padding: 5px 10px;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #f1f1f1;
+}
+.blogCard h2 {
+  font-family: "Poppins";
+  margin: 10px 0;
+}
+.blogCard-details {
+  /* margin-top: -10px; */
+  display: flex;
+  flex-direction: column;
+}
+.blogCard-details p {
+  margin: 0;
+  font-family: "Inter";
+  font-size: 10px;
+  font-weight: 300;
+  font-style: italic;
+}
+.content {
+  font-family: "Inter";
+  font-size: 14px;
+  margin-top: 10px;
+  color: #333;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  max-height: 4.5em;
+  height: 50px;
+  text-indent: 2rem;
+  text-align: justify;
+  font-weight: 500;
+}
+.viewBtn {
+  background-color: #089db1;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: "Poppins";
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.viewBtn:hover {
+  background-color: #26909e;
+  transform: scale(1.01);
+  box-shadow: rgb(46, 79, 83) 0px 3px 3px;
+}
+.blogCard-btns,
+.blogCard-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.blogCard-actions {
+  gap: 20px;
+}
+.deleteBtn {
+  border: none;
+  outline: none;
+  height: 24px;
+  cursor: pointer;
+}
+.deleteBtn:hover {
+  transform: scale(1.08);
+  box-shadow: #717171 0px 3px 3px;
+}
+.editBtn {
+  background-color: #eb8740;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: "Poppins";
+  font-size: 14px;
+}
+.editBtn:hover {
+  background-color: #d67a2c;
+  transform: scale(1.01);
+  box-shadow: rgb(46, 79, 83) 0px 3px 3px;
+}
+
+.updateBtn {
+  background-color: #ec7425;
+  color: white;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: "Poppins";
+  font-size: 14px;
+}
+.updateBtn:hover {
+  background-color: #c56805;
+  transform: scale(1.01);
+  box-shadow: rgb(46, 79, 83) 0px 3px 3px;
+}
+
+
+/* delete confirmation box */
+.deleteOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.deleteDialog {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  font-family: "Poppins";
+}
+
+.deleteButtons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.confirmBtn {
+  background-color: rgb(236, 63, 63);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: "Poppins";
+}
+.confirmBtn:hover {
+  background-color: rgb(216, 18, 57);
+  transform: scale(1.01);
+  box-shadow: rgb(46, 79, 83) 0px 3px 3px;
+}
+.cancelBtn {
+  background-color: #ccc;
+  color: #020202;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: "Poppins";
+}
+.cancelBtn:hover {
+  background-color: #bbb;
+  transform: scale(1.01);
+  box-shadow: rgb(46, 79, 83) 0px 3px 3px;
+}
+@media screen and (max-width: 700px) {
+  .blogCard {
+    margin: 10px 5px;
+  }
+}
+@media (max-width: 500px) {
+  .content {
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    max-height: 7.5em;
+    height: 100px;
+  }
+}

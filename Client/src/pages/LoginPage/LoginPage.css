@@ -1,0 +1,101 @@
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    margin: auto;
+    font-family: 'Poppins';
+    width: 50%;
+    gap: 30px;
+}
+.formContainer h1{
+    text-align: center;
+    color: #166f7b;
+}
+.formContainer div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.formContainer div p{
+    color: #666666;
+    font-size: 12px;
+}
+.formContainer div input{
+    height: 30px;
+    outline: none;
+    border: 1px solid rgba(102, 102, 102, 0.35);
+    color: black;
+    border-radius: 5px;
+    padding: 3px 10px;
+}
+.formContainer .loginpageBtn{
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    background-color: #C3C3C3;
+    color: #FFFFFF;
+    font-weight: 700;
+    transition: 0.1s ease-in-out;
+}
+.formContainer .loginpageBtn:hover{
+    background-color: #23B8CC;
+    transform: scale(1.01);
+    box-shadow: rgb(32, 121, 133) 0px 5px 5px;
+}
+.forgetPass{
+    font-family: 'Inter';
+    text-align: center;
+    cursor: pointer;
+    font-size: 12px;
+    text-decoration: underline;
+    color: #244779;
+}
+.donthaveaccnt, .terms{
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Inter';
+}
+.donthaveaccnt span{
+    font-family: 'Inter';
+    text-decoration: underline;
+    cursor: pointer;
+    color:#244779;
+}
+.donthaveaccnt span:hover, .terms span:hover, .forgetPass:hover{
+    color:#23B8CC;
+}
+.terms{
+    color: #676B5F;
+}
+.terms span{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+    .formContainer{
+    width: 80%;
+} 
+.loginPageHeader{
+    gap: 10px;
+    margin-top: 10px;
+}
+.loginPageHeader h1{
+    font-size:  24px;
+}
+    .loginPageHeader img{
+        height: 30px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .formContainer{
+    width: 100%;
+    gap: 20px;
+} 
+}
+    

@@ -1,0 +1,81 @@
+.profileBlogs {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 20px;
+}
+.profileContainer {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 100px;
+}
+.profileContainer h3 {
+  font-size: 22px;
+  margin-bottom: 4px;
+  font-family: "Inter";
+}
+.profileContainer h4 {
+  font-size: 18px;
+  color: #666;
+  margin-top: 0;
+  font-family: "Inter";
+}
+.logoutBtn {
+  width: fit-content;
+  height: fit-content;
+  justify-content: space-between;
+  padding: 5px 20px;
+  background-color: #ff695e;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: "Poppins";
+  cursor: pointer;
+}
+.logoutBtn:hover {
+  background-color: #e05856;
+  transform: scale(1.01);
+  box-shadow: rgb(46, 79, 83) 0px 3px 3px;
+}
+.sectionLine{
+    width: 100%;
+    height: 2px;
+    background-color: #bae8ee;
+    margin: 20px 0;
+}
+.profileBlogs h1{
+    color: #166f7b;
+    text-align: center;
+    font-family: "Inter";
+    margin-bottom: 20px;
+}
+.noBlogs  {
+  color: #bd5353 !important;
+}
+
+
+
+
+@media screen and (max-width: 500px) {
+  .profileContainer {
+  margin: 0 10px;
+}
+}
+@media screen and (max-width: 350px) {
+  .profileContainer {
+  flex-direction: column;
+  align-items: flex-start;
+}
+    .profileContainer h3 {
+        font-size: 20px;
+    }
+    .profileContainer h4 {
+        font-size: 16px;
+    }
+    .logoutBtn {
+        padding: 4px 20px;
+        font-size: 12px;
+    }
+}
