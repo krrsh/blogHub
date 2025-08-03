@@ -26,7 +26,7 @@ const LoginPage = () => {
     if (success) {
       setEmail("");
       setPassword("");
-      navigate("/homePage");
+      navigate("/HomePage");
     } else {
       setLocalError(error);
     }

@@ -4,7 +4,7 @@ import "./HomePage.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const homePage = () => {
+const HomePage = () => {
   const [blogsData, setBlogsData] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -55,4 +55,4 @@ const homePage = () => {
   );
 };
 
-export default homePage;
+export default HomePage;

@@ -24,7 +24,7 @@ const RegisterPage = () => {
         setUsername('')
         setEmail('')
         setPassword('')
-        navigate('/homePage');
+        navigate('/HomePage');
       }
       setLoading(false);
   };

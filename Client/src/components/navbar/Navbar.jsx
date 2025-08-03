@@ -14,7 +14,7 @@ const Navbar = () => {
   const pathSegments = location.pathname.split("/");
   const lastSegment = pathSegments.filter(Boolean).pop();
 
-  const navPage = lastSegment === "profilePage" ? "Profile" : lastSegment === "homePage" ? "Explore" : "";
+  const navPage = lastSegment === "profilePage" ? "Profile" : lastSegment === "HomePage" ? "Explore" : "";
 
   const [creatingBlog, setCreatingBlog] = useState(false);
   const [menuIcon, setMenuIcon] = useState(false);
@@ -29,7 +29,7 @@ const Navbar = () => {
     navigate("/profilePage");
   };
   const handleExploreLink = () => {
-    navigate("/homePage");
+    navigate("/HomePage");
   };
   const handleCloseMenu = (e) => {
     e.stopPropagation();
@@ -111,7 +111,7 @@ const Navbar = () => {
         <p
           onClick={() => {
             setMenuIcon(false);
-            navigate("/homePage");
+            navigate("/HomePage");
           }}
           style={{
             color: navPage === "Explore" ? "#129bad" : "#333",

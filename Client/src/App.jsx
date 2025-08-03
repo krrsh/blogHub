@@ -7,10 +7,10 @@ import {
 } from "react-router-dom";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage.jsx";
-import HomePage from "./pages/HomePage/homePage";
 import FullBlog from "./components/fullBlog/FullBlog";
 import ProfilePage from "./pages/ProfilePage/ProfilePage";
 import { useAuthContext } from "./context/authContext";
+import HomePage from "./pages/HomePage/homePage.jsx";
 
 function App() {
   const ProtectedRoute = ({ children }) => {
