@@ -8,7 +8,7 @@ export const useRegister = () => {
 
   const register = async (username, email, password) => {
     try {
-      const res = await axios.post("http://localhost:4000/api/auth/register", {
+      const res = await axios.post("https://bloghub-atng.onrender.com/api/auth/register", {
         username,
         email,
         password,

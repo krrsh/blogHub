@@ -37,7 +37,7 @@ const Navbar = () => {
   };
   const handlePublish = () => {
     if (blogDetails.title && blogDetails.summary && blogDetails.content) {
-      axios.post("http://localhost:4000/api/blogs", blogDetails, {
+      axios.post("https://bloghub-atng.onrender.com/api/blogs", blogDetails, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

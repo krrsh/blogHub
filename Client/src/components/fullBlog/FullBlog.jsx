@@ -18,7 +18,7 @@ const FullBlog = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:4000/api/blogs/${id}`)
+      .get(`https://bloghub-atng.onrender.com/api/blogs/${id}`)
       .then((res) => setBlog(res.data))
       .catch((err) => console.error(err));
   }, [id]);
@@ -34,7 +34,7 @@ const FullBlog = () => {
   //editing the blog
   const handleEdit = async () => {
     try {
-      const response = await axios.get(`http://localhost:4000/api/blogs/${id}`);
+      const response = await axios.get(`https://bloghub-atng.onrender.com/api/blogs/${id}`);
       const { title, summary, content } = response.data;
       setBlogDetails({ title, summary, content });
       setShowEdit(true);

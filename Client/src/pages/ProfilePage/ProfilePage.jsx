@@ -19,7 +19,7 @@ const ProfilePage = () => {
     }
     try {
       setLoading(true);
-      const res = await axios.get("http://localhost:4000/api/blogs/user", {
+      const res = await axios.get("https://bloghub-atng.onrender.com/api/blogs/user", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setBlogs(res.data);
@@ -37,7 +37,7 @@ const ProfilePage = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.post("http://localhost:4000/api/auth/logout");
+      await axios.post("https://bloghub-atng.onrender.com/api/auth/logout");
       localStorage.removeItem("token");
       dispatch({ type: "LOGOUT" });
       navigate("/loginPage");

@@ -10,7 +10,7 @@ export const useFetchUser = () => {
     if (!token) return;
 
     axios
-      .get("http://localhost:4000/api/users/me", {
+      .get("https://bloghub-atng.onrender.com/api/users/me", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setUser(res.data))

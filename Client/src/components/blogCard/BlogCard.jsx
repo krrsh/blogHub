@@ -18,7 +18,7 @@ const BlogCard = ({isOwnBlog, id, title, summary, createdAt, updatedAt }) => {
   //editing the blog
 const handleEdit = async () => {
   try {
-    const response = await axios.get(`http://localhost:4000/api/blogs/${id}`);
+    const response = await axios.get(`https://bloghub-atng.onrender.com/api/blogs/${id}`);
     const { title, summary, content } = response.data;
     setBlogDetails({ title, summary, content });
     setShowEdit(true);
@@ -30,7 +30,7 @@ const handleEdit = async () => {
   const handleUpdate = () => {
     if (blogDetails.title && blogDetails.summary && blogDetails.content) {
       axios
-        .put(`http://localhost:4000/api/blogs/${id}`, blogDetails)
+        .put(`https://bloghub-atng.onrender.com/api/blogs/${id}`, blogDetails)
         .then((response) => {
           console.log("Blog updated successfully:", response.data);
           setShowEdit(false);
@@ -48,7 +48,7 @@ const handleEdit = async () => {
   //deleting the blog
   const deleteBlog = () => {
     axios
-      .delete(`http://localhost:4000/api/blogs/${id}`)
+      .delete(`https://bloghub-atng.onrender.com/api/blogs/${id}`)
       .then((response) => {
         console.log("Blog deleted successfully:", response.data);
         setShowDeleteOverlay(false);
