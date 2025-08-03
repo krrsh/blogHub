@@ -1,6 +1,6 @@
 import React from "react";
-import BlogCard from "../../components/BlogCard/BlogCard";
-import Navbar from "../../components/Navbar/Navbar";
+import BlogCard from "../../components/blogCard/BlogCard";
+import Navbar from "../../components/navbar/Navbar";
 import "./HomePage.css";
 import { useEffect, useState } from "react";
 import axios from "axios";

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./ProfilePage.css";
 import Navbar from "../../components/navbar/Navbar.jsx";
-import BlogCard from "../../components/blogCard/BlogCard";
+import BlogCard from "../../components/blogCard/BlogCard.jsx";
 import { useNavigate } from "react-router-dom";
 import { useAuthContext } from "../../context/authContext";
 import axios from "axios";
