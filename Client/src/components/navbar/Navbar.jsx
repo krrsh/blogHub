@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 import logo from "../../assets/blogLogo.png";
 import burger from "../../assets/burgerIcon.png";
@@ -58,7 +58,7 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      <div className="logo">
+      <div onClick={()=>navigate('/homePage')} className="logo">
         <img src={logo} alt="logo" />
         <h1>Blog Hub</h1>
       </div>

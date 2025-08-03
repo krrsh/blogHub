@@ -30,7 +30,7 @@ const RegisterPage = () => {
   };
 
 
-{loading ? <div className="spinner">Logging in...</div> : <form>...</form>}
+{loading ?       <div className="loadingContainer"><div className="spinner"></div></div> : <form>...</form>}
 
 
   return (

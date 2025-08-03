@@ -27,7 +27,7 @@ const HomePage = () => {
 
   {
     loading ? (
-      <div className="spinner">Loading...</div>
+      <div className="loadingContainer"><div className="spinner"></div></div>
     ) : (
       blogsData.map((blog) => <BlogCard key={blog._id} blog={blog} />)
     );
@@ -37,9 +37,9 @@ const HomePage = () => {
     <div className="homePage-container">
       <Navbar />
       {loading ? (
-      <div className="spinner">Loading...</div>
+      <div className="loadingContainer"><div className="spinner"></div></div>
     ) : blogsData.length === 0 ? (
-      <h2>No blogs found</h2>
+      <h2 style={{textAlign:'center',marginTop:'200px', fontFamily:'Poppins'}}>Be the first to create!</h2>
     ) : (
       blogsData.map((blog) => (
         <BlogCard
@@ -49,6 +49,7 @@ const HomePage = () => {
           summary={blog.summary}
           createdAt={blog.createdAt}
           updatedAt={blog.updatedAt}
+          username={blog.username}
         />
       ))
     )}

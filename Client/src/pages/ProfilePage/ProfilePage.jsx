@@ -62,7 +62,7 @@ const ProfilePage = () => {
       <div className="profileBlogs">
         <h1>Your Blogs</h1>
         {loading ? (
-          <div className="spinner">Loading...</div>
+      <div className="loadingContainer"><div className="spinner"></div></div>
         ) : blogs.length === 0 ? (
           <h1 className="noBlogs">You haven't written any... Start writing!</h1>
         ) : (

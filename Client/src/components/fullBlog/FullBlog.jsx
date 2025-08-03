@@ -5,7 +5,6 @@ import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 
 const FullBlog = () => {
-  const navigate = useNavigate();
   const { id } = useParams();
   const [blog, setBlog] = useState(null);
   const [showOverlay, setShowOverlay] = useState(false);
@@ -31,18 +30,6 @@ const FullBlog = () => {
     );
   }
 
-  //editing the blog
-  const handleEdit = async () => {
-    try {
-      const response = await axios.get(`https://bloghub-atng.onrender.com/api/blogs/${id}`);
-      const { title, summary, content } = response.data;
-      setBlogDetails({ title, summary, content });
-      setShowEdit(true);
-    } catch (error) {
-      console.error("Failed to fetch blog for editing:", error);
-    }
-  };
-
   return (
     <>
       <Navbar />
@@ -51,7 +38,7 @@ const FullBlog = () => {
           <h2>{blog.title}</h2>
         </div>
         <div className="blogpage-details">
-          <p>Author</p>
+          <p>Author: {blog.username}</p>
           <p>
             Published on:{" "}
             {new Date(blog.createdAt).toLocaleString("en-IN", {

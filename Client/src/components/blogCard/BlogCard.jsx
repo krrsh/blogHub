@@ -4,7 +4,7 @@ import dlt from "../../assets/dlt.png";
 import { useState } from "react";
 import axios from "axios";
 
-const BlogCard = ({isOwnBlog, id, title, summary, createdAt, updatedAt }) => {
+const BlogCard = ({isOwnBlog, id, title, summary, createdAt, updatedAt, username }) => {
   const navigate = useNavigate();
 
   const [showDeleteOverlay, setShowDeleteOverlay] = useState(false);
@@ -65,7 +65,7 @@ const handleEdit = async () => {
       <div className="blogCard">
         <h2>{title}</h2>
         <div className="blogCard-details">
-          <p>Author</p>
+          <p>Author : {username}</p>
           <p>
             Published on:{" "}
             {new Date(createdAt).toLocaleString("en-IN", {

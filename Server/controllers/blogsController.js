@@ -42,6 +42,7 @@ const postABlog = async (req, res) => {
       summary,
       content,
       user: decoded.email,
+      username: decoded.username,
     });
     res.status(201).json(blog);
   } catch (error) {
