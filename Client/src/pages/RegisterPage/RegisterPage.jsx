@@ -66,12 +66,10 @@ const RegisterPage = () => {
       <button onClick={handleClick} className="signinPageBtn">
         Create an account
       </button>
-      {loading ? (
+      {loading && (
         <div className="loadingContainer">
           <div className="spinner"></div>
         </div>
-      ) : (
-        <form>...</form>
       )}
 
       {error && (
