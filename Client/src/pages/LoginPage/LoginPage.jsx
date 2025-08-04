@@ -17,6 +17,7 @@ const LoginPage = () => {
     setLoading(true);
     if (!email.trim() || !password.trim()) {
       setLocalError("Please fill in all the required fields*");
+      setLoading(false);
       return;
     }
 
@@ -28,6 +29,7 @@ const LoginPage = () => {
       setPassword("");
       navigate("/HomePage");
     } else {
+      setLoading(false);
       setLocalError(error);
     }
     setLoading(false);
