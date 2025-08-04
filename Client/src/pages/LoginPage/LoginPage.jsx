@@ -43,9 +43,6 @@ const LoginPage = () => {
     }
   }, [error]);
 
-  {loading ? <div className="loadingContainer"><div className="spinner"></div></div> : <form>...</form>}
-
-
   return (
     <>
       <div className="formContainer">
@@ -71,6 +68,14 @@ const LoginPage = () => {
         <button onClick={handleClick} className="loginpageBtn">
           Log in
         </button>
+        {loading ? (
+          <div className="loadingContainer">
+            <div className="spinner"></div>
+          </div>
+        ) : (
+          <form>...</form>
+        )}
+
         {localError ? (
           <p style={{ color: "red" }}>{localError}</p>
         ) : (
