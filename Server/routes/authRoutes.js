@@ -30,7 +30,7 @@ router.post("/register", async (req, res) => {
 
     res.status(201).json({ token });
   } catch (err) {
-    res.status(500).json({ message: "Something went wrong" });
+    res.status(500).json({ message: err.message });
   }
 });
 

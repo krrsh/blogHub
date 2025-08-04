@@ -8,6 +8,7 @@ const RegisterPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
+  const [localError, setLocalError] = useState('');
   //useRegister hook
   const { register, error } = useRegister();
   const navigate = useNavigate();
@@ -15,6 +16,11 @@ const RegisterPage = () => {
   const handleClick = async (e) => {
     e.preventDefault();
     setLoading(true);
+    if(!username || !email || !password){
+      setLocalError('Please fill in all the required fields*')
+      setLoading(false)
+      return;
+    }
     const success = await register(username, email, password);
     if (success) {
       setLoading(false);
@@ -72,7 +78,8 @@ const RegisterPage = () => {
         </div>
       )}
 
-      {error && (
+      {localError ? <p style={{ color: "red", fontFamily: "Poppins", textAlign: "center" }}>{localError}</p> :
+      error && (
         <p style={{ color: "red", fontFamily: "Poppins", textAlign: "center" }}>
           {error}
         </p>
